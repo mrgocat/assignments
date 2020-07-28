@@ -12,8 +12,6 @@ namespace Assignments1
 {
     class Program2
     {
-
-
         public static void initializeData() // only run this once at first
         {
             using (SchoolContext dbContext = new SchoolContext())
@@ -63,7 +61,7 @@ namespace Assignments1
         }
         static void Main(string[] args)
         {
-            //  initializeData(); // only run this once at first. 
+            initializeData(); // only run this once at first. 
 
             var students = new StudentRepository().AllListWithAll();
             foreach (var student in students)
